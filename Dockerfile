@@ -13,7 +13,9 @@ RUN micromamba install -y -n base -c conda-forge -c bioconda \
     numpy \
     scipy \
     matplotlib \
+    seaborn \
     biopython \
+    upsetplot \
  && micromamba clean -a -y
 
 

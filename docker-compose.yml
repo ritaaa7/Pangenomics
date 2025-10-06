@@ -8,6 +8,4 @@ services:
     stdin_open: true
     volumes:
       - ./work:/work
-      - ./eggnog_db:/data/eggnog
-      
-    
+      - ./eggnog_db:/data/eggnog 
