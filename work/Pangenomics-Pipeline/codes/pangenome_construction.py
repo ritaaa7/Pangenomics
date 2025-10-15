@@ -161,5 +161,3 @@ construct_pangenome(species)
 
 print("\n======== Pangenome Construction Time for " + species + "========")
 print("\t\t", (time.time() - start_time), " seconds\n")
-
-

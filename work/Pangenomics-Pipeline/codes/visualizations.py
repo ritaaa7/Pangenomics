@@ -51,7 +51,7 @@ def extract_strain(seq_id):
 # Step 3: Build presence/absence matrix
 # -------------------
 #clstr_path = input("Enter the full path to your .clstr file: ").strip()
-clstr_path = r'/work/Pangenomics-Pipeline/codes/Acinetobacter_baumannii/Acinetobacter_baumannii.fasta.clstr'  # <-- replace with your real file path
+clstr_path = r'/work/Pangenomics-Pipeline/codes/Escherichia_coli/Escherichia_coli.fasta.clstr'  # <-- replace with your real file path
 clusters = parse_clstr(clstr_path)
 
 # Build DataFrame: rows = clusters, cols = strains

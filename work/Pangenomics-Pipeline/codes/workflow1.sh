@@ -72,7 +72,7 @@ for file in "$directory"/*.csv; do
 	clustering_time=$(date +%s)
 
 	# CD-HIT command 
-	cd-hit -i $species_name/$cds_fname.fasta -o $species_name/$species_name.fasta -n 5 -c 0.8 -aL 0.8 -M 8000
+	cd-hit -i $species_name/$cds_fname.fasta -o $species_name/$species_name.fasta -n 5 -c 0.8 -aL 0.8 -M 16000 -T 16
 	
 	run_time=$(($(date +%s) - clustering_time)) 
 	echo
@@ -113,7 +113,7 @@ for file in "$directory"/*.csv; do
 	echo "______________________________________________________"
 	echo
 
-	emapper.py -i "$protein_output" -o $species_name/$species_name --usemem --cpu 8 --outfmt_short     # $species_name/$species_name.fasta --> $protein_output
+	emapper.py -i "$protein_output" -o $species_name/$species_name --usemem --cpu 16 --outfmt_short     # $species_name/$species_name.fasta --> $protein_output
 
 	run_time=$(($(date +%s) - eggNOG_time)) 
 	echo
@@ -139,3 +139,6 @@ end_time=$(($(date +%s) - start_time))
 echo
 echo "----- Total Workflow Run-time: $run_time seconds-----"
 echo
+
+echo "Generating Visualizations"
+python visualizations.py
