@@ -157,7 +157,7 @@ strain_counts = cluster_sizes.values
 #plt.show()
 
 # 4) Heatmap of pairwise strain similarity (shared clusters)
-N = 100  # first N clusters
+N = 15000  # first N clusters
 subset = presence_absence.iloc[:N]  # select first N clusters (rows)
 
 # Compute pairwise strain similarity only for these clusters
